@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(85, 88, 203);
+
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 10px;
+            margin-top: 400px;
+            
+        }
+        h1{
+            font-size: 15px;
+            color: white;
+
+        }
+        h2{
+            font-size: 8px;
+            color: white;
+            padding-left: 200px;
+        }
+        :in-range{
+            width: 40px;
+        }
+        .container{
+            width: 300px;
+            background-color: rgb(32, 34, 82);
+            border-radius: 15px;
+            padding: 20px;
+            padding-bottom: 25px;
+
+
+        }
+        .display{
+            background-color: rgb(32, 34, 82);
+            color: rgb(244, 238, 238);
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            height: 50px;
+            font-size: 30px;
+            align-content: center;
+            
+
+            
+
+        }
+        .buttons{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            
+
+        }
+        button{
+            height: 50px;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 20px;
+            color: black;
+            cursor: pointer;
+            border: none;
+            background-color: white;
+
+
+            
+        }
+        button.delete{
+            background-color: rgb(85, 88, 203);
+            color: white;
+        }
+        button.reset{
+            background-color: rgb(85, 88, 203);
+            grid-column: span 2;
+            color: white;
+            /* height: 45px; */
+            border-radius: 10px;
+        }
+        button.equal_to{
+            background-color: rgb(211, 10, 10);
+            grid-column: span 2;
+            /* height: 45px; */
+            color: white;
+            border-radius: 10px;
+            align-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>calc</h1>
+        <h2>THEME</h2>
+        <input value="123" type="range">
+    </header>
+    <br>
+    <div class="display" id="display">0</div>
+    <div class="container">
+        <div class="buttons">
+            <button onclick="appendNumber('7')"><b>7</b></button>
+            <button onclick="appendNumber('8')"><b>8</b></button>
+            <button onclick="appendNumber('9')"><b>9</b></button>
+            <button onclick="deleteDigit()" class="delete"><b>DEL</b></button>
+
+            <button onclick="appendNumber('4')"><b>4</b></button>
+            <button onclick="appendNumber('5')"><b>5</b></button>
+            <button onclick="appendNumber('6')"><b>6</b></button>
+            <button onclick="appendOperator('+')"><b>+</b></button>
+
+
+            <button onclick="appendNumber('1')"><b>1</b></button>
+            <button onclick="appendNumber('2')"><b>2</b></button>
+            <button onclick="appendNumber('3')"><b>3</b></button>
+            <button onclick="appendOperator('-')"><b>-</b></button>
+    
+
+
+            <button onclick="appendNumber('.')"><b>.</b></button>
+            <button onclick="appendNumber('0')"><b>0</b></button>
+            <button onclick="appendNumber('/')"><b>/</b></button>
+            <button onclick="appendOperator('*')"><b>*</b></button>
+
+            <button onclick="resetDisplay()" class="reset"><b>RESET</b></button>
+            <button onclick="checkResult('=')" class="equal_to"><b>=</b></button>
+
+        </div>
+
+    </div>
+    
+</body>
+<script src="calculator.js"></script>
+</html>
