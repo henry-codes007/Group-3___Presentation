@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<style>
+  /* body {
+    font-family: 'Tangerine', serif;
+    font-size: 48px;
+} */
+/* .lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  } */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+  body{
+    background-color: rgb(59 70 100);
+    font-family: "Lato", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+
+
+  }
+  
+  main{
+    margin-top: 5vh;
+    width: 35vw;
+    scale: 0.8;
+
+  }
+  header{
+    color: rgb(252 254 252);
+    display: flex;
+    justify-content: space-between;
+  }
+  h2{
+    font-size: 2vw;
+    padding-left: 2px;
+  }
+  .theme{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+  }
+  
+  .toggle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+  .numbers {
+    display: flex;
+    justify-content: space-between;
+    width: 5vw;
+    margin-bottom: 1vh;
+  }
+  
+  .toggle {
+    position: relative;
+    width: 5.3vw;
+    height: 4.5vh;
+    background-color: #37536e;
+    border-radius: 20px;
+    padding: 5px;
+  }
+  
+  .circle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 3vh;
+    background-color: red;
+    border-radius: 50%;
+    transition: left 0.3s ease;
+  }
+  
+
+  .theme h3{
+    font-size: 1.1vw;
+    display: flex;
+    align-items: center;
+  }
+
+  #display{
+    background-color: rgb(14, 20, 36);
+    margin-top: 4vh;
+    opacity: 0.6;
+    width: 100%;
+    height: 15vh;
+    border: none;
+    border-radius: 7px;
+    text-align: right;
+    font-size: 3.4vw;
+    font-weight: 700;
+    padding-right: 15px;
+    color: rgb(255, 255, 255);
+  }
+  section{
+    background-color: rgb(24 31 50);
+    opacity: 0.6;
+    padding-bottom: 3vh;
+    border-radius: 7px;
+  }
+  .numberButton{
+    margin-top: 3vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-shrink: 4; */
+  }
+  .numberButton button{
+    border: none;
+    width: 21%;
+    height: 9vh;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2vw;
+    color: rgb(62, 53, 53);
+    background-color: rgb(249, 236, 223);
+    border-radius: 6px;
+    box-shadow: 2px 3px 2px rgb(157, 151, 163);
+    cursor: pointer;
+  }
+  button:hover{
+    background-blend-mode: overlay;
+    background-color: #bdcbd8;
+  }
+  #lastBoxes{
+    margin-top: 0;
+  }
+  #lastBoxes button{
+    width: 45%;
+    cursor: pointer;
+  }
+  .clear{
+    background-color: rgb(119, 132, 178) !important;
+    box-shadow: 2px 3px 2px rgb(102 114 156) !important;
+    color: aliceblue !important;
+  }
+  .equate{
+    background-color: rgb(255, 25, 0) !important;
+    box-shadow: 2px 3px 2px rgb(165, 17, 0) !important;
+    color: aliceblue !important;
+  }
+
+/* media queries */
+
+@media only screen and (max-width: 600px ) {
+  /* body{
+    font-size: 28px;
+  } */
+  main{
+    width: 70vw;
+    scale: 0.7;
+  }
+  h2{
+    font-size: 4vw;
+  }
+  .theme h3{
+    font-size: 2vw;
+  }
+  .circle{
+    
+    /* width: 26px; */
+    width: 15px;
+    height: 2.5vh;
+  }
+  .toggle{
+    width: 10vw;
+    height: 3.6vh;
+  }
+  .numbers{
+    width: 9vw;
+  }
+  #display{
+    font-size: 6vw;
+  }
+  .numberButton button{
+    font-size: 4vw;
+    
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /* body{
+    font-size: 18px;
+  } */
+  main{
+    width: 100vw;
+    scale: 0.5;
+  }
+  h2{
+    font-size: 2vw;
+  }
+  .theme h3{
+    font-size: 1.5vw;
+  }
+  .circle{
+    /* margin-top: 0.4vh; */
+    width: 20px;
+    height: 2vh;
+    left: 1em
+  }
+  .toggle{
+    width: 8vw;
+    height: 2.8vh;
+  }
+  .numbers{
+    width: 6vw;
+  }
+  #display{
+    font-size: 4vw;
+  }
+  .numberButton button{
+    font-size:2.5vw;
+  }
+  }
+</style>
+<body>
+
+    <main>
+        <header>
+            <h2>calc</h2>
+            <div class="theme">
+                <h3>THEME</h3>
+                <div class="toggle-container">
+                    <div class="numbers">
+                      <span>1</span>
+                      <span>2</span>
+                      <span>3</span>
+                    </div>
+                    <div class="toggle">
+                      <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <input type="text" id="display" readonly placeholder="0">
+        <section>
+            <div class="numberButton">
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')" >8</button>
+                <button onclick="appendToDisplay('9')" >9</button>
+                <button onclick="deleteValue()"  class="clear">Del</button>
+                <button onclick="appendToDisplay('4')" >4</button>
+                <button onclick="appendToDisplay('5')" >5</button>
+                <button onclick="appendToDisplay('6')" >6</button>
+                <button onclick="appendToDisplay('+')" >+</button>
+                <button onclick="appendToDisplay('1')" >1</button>
+                <button onclick="appendToDisplay('2')" >2</button>
+                <button onclick="appendToDisplay('3')" >3</button>
+                <button onclick="appendToDisplay('-')" >-</button>
+                <button onclick="appendToDisplay('.')" >.</button>
+                <button onclick="appendToDisplay('0')" >0</button>
+                <button onclick="appendToDisplay('/')" >/</button>
+                <button onclick="appendToDisplay('')" ></button>
+            </div>
+            <div class="numberButton" id="lastBoxes">
+                <button onclick="clearDisplay()" class="clear">Reset</button>
+                <button onclick="calculate()"  class="equate">=</button>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <script src='presentation.js'></script>
+</body>
+</html>

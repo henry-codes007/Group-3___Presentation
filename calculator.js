@@ -1,6 +1,6 @@
-let displayElement = document.getElementById("display")
-let currentInput = "";
-
+let displayElement = document.getElementById('display');
+let currentInput = "0";
+ 
 function appendNumber(number) {
     if (currentInput === "0" && number!== "."){
         currentInput = number;
@@ -19,13 +19,12 @@ function appendNumber(number) {
     function deleteDigit() {
         currentInput = currentInput.slice(0, -1);
         displayElement.innerText = currentInput || "0";
-
+ 
     }
     function resetDisplay(){
         currentInput = "";
         displayElement.innerText = "0";
-
-
+ 
     }
     function checkResult(){
         try {
@@ -35,6 +34,3 @@ function appendNumber(number) {
             displayElement.innerText = "Sorry";
         }
     }
-
-
-

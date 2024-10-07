@@ -45,8 +45,8 @@
         }
         .display{
             background-color: rgb(32, 34, 82);
-            color: rgb(244, 238, 238);
-            text-align: center;
+            color: rgb(158, 185, 161);
+            text-align: right;
             padding: 10px;
             border-radius: 10px;
             margin-bottom: 25px;
@@ -95,19 +95,24 @@
             /* height: 45px; */
             color: white;
             border-radius: 10px;
-            align-content: center;
+            align-content: center; 
         }
-
+        @media (max-width: 393px) {
+            header {
+                margin-top: -150px;
+            }
+        }        
     </style>
 </head>
-<body>
+<boby>
+    
     <header>
         <h1>calc</h1>
         <h2>THEME</h2>
         <input value="123" type="range">
     </header>
     <br>
-    <div class="display" id="display">0</div>
+    <div class="display" id="display"><b>0</b></div>
     <div class="container">
         <div class="buttons">
             <button onclick="appendNumber('7')"><b>7</b></button>
